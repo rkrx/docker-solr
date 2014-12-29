@@ -6,7 +6,7 @@ RUN apt-get -y install curl
 
 WORKDIR /opt
 RUN curl -s https://archive.apache.org/dist/lucene/solr/3.6.2/apache-solr-3.6.2.tgz > apache-solr.tgz
-RUN tar xfvz apache-solr.tgz .
+RUN tar xfvz apache-solr.tgz /opt
 RUN rm apache-solr.tgz
 
 EXPOSE 8983
