@@ -1,10 +1,11 @@
 FROM ubuntu:14.04
 
 RUN apt-get update
-RUN apt-get -y install openjdk-7-jdk wget
+RUN apt-get -y install openjdk-7-jdk
+RUN apt-get -y install curl
 
 WORKDIR /opt
-RUN wget -o apache-solr.tgz https://archive.apache.org/dist/lucene/solr/3.6.2/apache-solr-3.6.2.tgz
+RUN curl -s https://archive.apache.org/dist/lucene/solr/3.6.2/apache-solr-3.6.2.tgz > apache-solr.tgz
 RUN ls -la
 RUN tar xfvz apache-solr.tgz
 RUN rm apache-solr.tgz
