@@ -12,4 +12,7 @@ RUN rm apache-solr.tgz
 EXPOSE 8983
 
 WORKDIR /opt/apache-solr/example
-CMD java -jar start.jar
+RUN ls -la
+
+
+#CMD java -jar start.jar
