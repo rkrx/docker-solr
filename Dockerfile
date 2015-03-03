@@ -12,6 +12,10 @@ RUN rm apache-solr.tgz
 EXPOSE 8983
 
 WORKDIR /opt/apache-solr-3.6.2/example
+RUN ls -la solr/conf/schema.xml
+RUN rm solr/conf/schema.xml
+RUN ls -la solr/conf/schema.xml
 ADD schema.xml solr/conf/schema.xml
+RUN ls -la solr/conf/schema.xml
 
 CMD java -jar start.jar
