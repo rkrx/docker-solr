@@ -16,4 +16,4 @@ WORKDIR /opt/apache-solr-3.6.2/example
 RUN rm solr/conf/schema.xml
 ADD schema.xml /opt/apache-solr-3.6.2/example/solr/conf/schema.xml
 
-CMD java -jar start.jar
+CMD java -jar start.jar > /dev/null
