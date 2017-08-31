@@ -248,8 +248,6 @@
 				<filter class="solr.StandardFilterFactory"/>
 				<filter class="solr.WordDelimiterFilterFactory" catenateWords="1" catenateAll="1" preserveOriginal="1"/>
 				<filter class="solr.LowerCaseFilterFactory"/>
-				<filter class="solr.PorterStemFilterFactory"/>
-				<filter class="solr.PhoneticFilterFactory" encoder="DoubleMetaphone" inject="true"/>
 			</analyzer>
 		</fieldType>
 
