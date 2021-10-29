@@ -1,0 +1,10 @@
+version: "3.2"
+
+services:
+  solr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8983:8983"
